@@ -4,7 +4,7 @@ from src.api.main import app
 client = TestClient(app)
 
 default_data = {
-    "lastNumbersStored": {"a": 3, "b": 2},
+    "lastNumbersStored": {"a": 1, "b": 2},
     "sum": 3,
     "subtract": -1,
     "multiply": 2,

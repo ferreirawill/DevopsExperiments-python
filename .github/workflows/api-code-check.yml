@@ -4,22 +4,12 @@
 name: Python application
 
 on:
-  push:
-    branches: [ "main","develop","feature/*" ]
-    tags: [ "v*" ]
-  pull_request:
-    branches: [ "main" ]
+  workflow_call:
 
-env: 
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
-
-
-permissions:
-  contents: read
 
 jobs:
-  build-and-push-image:
+
+  build:
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false

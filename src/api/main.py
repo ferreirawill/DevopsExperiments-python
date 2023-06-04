@@ -31,7 +31,6 @@ def get_data():
 @app.post('/')
 def post_data(new_data: DataModel):
     new_dict = {
-        "lastMethod": "POST",
         "lastNumbersStored": {"a": new_data.a, "b": new_data.b},
         "sum": op.simple_sum(new_data.a, new_data.b),
         "subtract": op.subtract(new_data.a, new_data.b),
@@ -48,7 +47,6 @@ def post_data(new_data: DataModel):
 @app.put('/')
 def put_data(updated_data: DataModel):
     new_dict = {
-        "lastMethod": "PUT",
         "lastNumbersStored": {"a": updated_data.a, "b": updated_data.b},
         "sum": op.simple_sum(updated_data.a, updated_data.b),
         "subtract": op.subtract(updated_data.a, updated_data.b),

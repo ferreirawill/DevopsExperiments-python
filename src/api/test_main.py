@@ -21,5 +21,3 @@ def test_put_data():
 def test_delete_data():
     response = client.delete("/")
     assert response.status_code == 204
-    assert response.content == b'{}'
-

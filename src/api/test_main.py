@@ -4,12 +4,12 @@ from src.api.main import app
 client = TestClient(app)
 
 default_data = {
-    "lastNumbersStored": {"a": 1, "b": 2},
-    "sum": 3,
-    "subtract": -1,
-    "multiply": 2,
-    "divide": 0.5,
-    "power": 1,
+    "lastNumbersStored": {"a": 10, "b": 10},
+    "sum": 20,
+    "subtract": 0,
+    "multiply": 100,
+    "divide": 1,
+    "power": 10000000000,
 }
 
 def test_get_data():

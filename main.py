@@ -30,7 +30,7 @@ def put_data(updated_data: DataModel):
 @app.delete('/')
 def delete_data():
     data.clear()
-    return JSONResponse(status_code=204)
+    return JSONResponse(status_code=204, content=data)
 
 
 

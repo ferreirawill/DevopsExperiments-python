@@ -29,10 +29,6 @@ def power(a, b):
         raise TypeError
     return a ** b
 
-def root(a, b):
-    if not is_number(a) or not is_number(b):
-        raise TypeError
-    return a ** (1/b)
 
 def is_number(a):
     try:

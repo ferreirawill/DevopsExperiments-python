@@ -10,7 +10,7 @@ app = FastAPI()
 
 data = {
     "lastNumbersStored": {"a": 1, "b": 2},
-    "sum": 85,
+    "sum": 3,
     "subtract": -1,
     "multiply": 2,
     "divide": 0.5,

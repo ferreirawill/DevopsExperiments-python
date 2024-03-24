@@ -18,6 +18,9 @@ jobs:
     build-and-push:
         uses: ./.github/workflows/api-build-and-push.yml
         secrets: inherit
+        permissions:
+            contents: read
+            packages: write
         if: github.ref == 'refs/heads/main'
         with:
             tag_name: latest

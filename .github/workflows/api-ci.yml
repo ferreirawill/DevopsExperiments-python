@@ -14,6 +14,13 @@ jobs:
     build: 
         uses: ./.github/workflows/api-code-check.yml
         secrets: inherit
+
+    build-and-push:
+        uses: ./.github/workflows/api-build-and-push.yml
+        secrets: inherit
+        if: github.ref == 'refs/heads/main'
+        with:
+            tag_name: latest
     
     deploy:
         needs: build
